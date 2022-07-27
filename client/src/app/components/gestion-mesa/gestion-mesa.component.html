@@ -1,0 +1,70 @@
+<div class="row centered" style="
+max-width: 100%;
+">
+  <div class="column">
+    <div id="register">
+      <div id="ticket">
+        <h1>TICKET</h1>
+        <h2>RESTION</h2>
+        <h3>CUIT: 023265487456</h3>
+
+        <table>
+          <tbody id="entries">
+            <div *ngFor="let plato of mesa.platos">
+              <div class="row">
+                <div class="col-md-4">
+                  <ul>
+                    <li>
+                      {{plato.nombre}}.........$ {{plato.precio}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+              <th id="total"> $ {{mesa.total}}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="column" style="overflow: auto; max-height: 600px; padding-left: 20px;">
+    <div *ngFor="let plato of platos">
+      <div class="box">
+        <div style="display:flex;">
+          <div class="centered" style="
+          width: 150px; margin-right: 20px;
+      ">
+            <ul style="min-height: 59px;">
+              <li>
+                {{plato.nombre}}
+              </li>
+              <li>
+                $ {{plato.precio}}
+              </li>
+            </ul>
+          </div>
+          <div style="
+          margin-right: 20px;
+      ">
+            <div class="image">
+              <img [src]="plato.imagen" class="card-img" style="height: 76px">
+            </div>
+
+            <div><button type="submit" class="btn btn-primary btn-block" (click)="selectPlato(plato!)"
+                style="width: 140px;">Agregar plato</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="inner"><button class="btn btn-primary btn-block homebtn" (click)="goBack()"
+        style="border-color: rgb(31, 34, 34); width: 250px;">Volver</button></div>
+  </div>
+</div>

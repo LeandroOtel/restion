@@ -1,0 +1,32 @@
+<div class="centered">
+  <div class="box">
+    <mat-grid-list cols="3" rowHeight="140px" [gutterSize]="'30px'">
+      <mat-grid-tile *ngFor="let mesa of mesas" [colspan]="1" [rowspan]="1">
+
+        <div style="text-align: center;">
+          Mesa # {{mesa.numeroDeMesa}}
+          <br>Total
+          <br>${{mesa.total}}
+        </div>
+        <div style="position: relative; left: 28px;">
+          <button class="btn btn-primary btn-block" [routerLink]="['/gestionMesa', mesa._id]" router link
+            active="active" style="width: 100px;">
+            Agregar Platos
+          </button>
+          <button class="btn btn-primary btn-block" [routerLink]="['/gestionEliminarProducto', mesa._id]" router link
+            active="active" style="width: 100px;">
+            Eliminar Platos
+          </button>
+          <button class="btn btn-primary btn-block" (click)="cobrar(this.mesa!)" router link active="active"
+            style="width: 100px;">
+            Cobrar
+          </button>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+<div class="centered"><button class="btn btn-primary btn-block" routerLink="/" router link active="active"
+    style="border-color: rgb(31, 34, 34); width: 300px;">
+    Volver
+  </button></div>

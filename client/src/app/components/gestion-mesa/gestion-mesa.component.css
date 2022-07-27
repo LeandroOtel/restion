@@ -1,0 +1,111 @@
+.centered {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 95%;
+  height: 158px;
+  background: rgb(46, 44, 44);
+  border: 1px solid rgb(70, 69, 69);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.homebtn {
+  font-size: 28px;
+  height: 260px;
+  width: 300px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 20px;
+  font-family: revert;
+  border-radius: 1.25rem;
+  border-color: rgb(31, 34, 34);
+}
+.homebtn:hover {
+  color: #fff;
+  background-color: #282c2f;
+  border-color: #232628;
+}
+
+.column {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+body {
+  background: #EEE;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 3em;
+  padding: 0;
+}
+#register {
+  width: 360px;
+  margin: auto;
+  overflow: auto;
+  max-height: 590px;
+}
+#ticket {
+  background: white;
+  padding: 1em;
+  box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+#ticket h1 {
+  text-align: center;
+}
+#ticket h2 {
+  text-align: center;
+}
+#ticket table {
+  font-family: monospace;
+  width: 100%;
+  border-collapse: collapse;
+}
+#ticket td, #ticket th {
+  padding: 5px;
+}
+#ticket th {
+  text-align: left;
+}
+#ticket td, #ticket #total {
+  text-align: right;
+}
+#ticket tfoot th {
+  border-top: 1px solid black;
+}
+
+
+#entry {
+  background: #333;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+#entry input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: right;
+  font-family: sans-serif;
+  font-size: 20px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#entry input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,.75);
+}
+

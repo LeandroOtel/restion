@@ -1,0 +1,31 @@
+<div class="row centered" style="
+max-width: 100%;
+">
+  <div class="column"><button class="btn btn-primary btn-block homebtn" routerLink="/mesa/create" router link
+      active="active">Crear</button></div>
+  <div class="column" style="overflow: auto; max-height: 600px; width: 350px">
+    <div *ngFor="let mesa of mesas">
+      <div class="box" style="display: flex; justify-content: center;">
+        <div>
+          <ul>
+            <li>
+              Mesa # {{mesa.numeroDeMesa}}
+            </li>
+            <li>
+              Ubicación: {{mesa.ubicacion}}
+            </li>
+            <li>
+              Total consumido: {{mesa.total}}
+            </li>
+          </ul>
+          <div style="display: flex;"><button type="submit" class="btn btn-primary btn-block" (click)="deleteMesa(mesa._id!)"
+              style="border-color: rgb(31, 34, 34); width: 120px;">Eliminar</button>
+              <button class="btn btn-secondary" [routerLink]="['/mesa/edit', mesa._id]"
+              style="width: 120px">Editar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column"><button class="btn btn-primary btn-block homebtn" routerLink="/menuSupervisor" router link
+      active="active">Volver</button></div>
+</div>

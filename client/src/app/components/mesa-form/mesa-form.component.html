@@ -1,0 +1,25 @@
+<div class="row centered" style="height: 590px;
+max-width: 100%;
+">
+  <div class="col-sm-6">
+    <div class="card card-body" style="margin: 30px;">
+      <h1 style="color:antiquewhite; text-align: center;">Edición Mesas</h1>
+      <form (submit)="edit ? updateMesa() : submitMesa()">
+        <div class="form-group">
+          <input type="text" name="numeroDeMesa" [(ngModel)]="mesa.numeroDeMesa" class="form-control"
+            placeholder="numeroDeMesa">
+        </div>
+        <div class="form-group">
+          <input type="text" name="ubicacion" [(ngModel)]="mesa.ubicacion" class="form-control" placeholder="ubicacion"
+            autofocus>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="border-color: rgb(31, 34, 34);">
+          Guardar
+        </button>
+        <button class="btn btn-primary btn-block" (click)="goBack()" style="border-color: rgb(31, 34, 34);">
+          Volver
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
